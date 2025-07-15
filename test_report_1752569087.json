@@ -1,0 +1,95 @@
+{
+  "summary": {
+    "total_tests": 10,
+    "passed_tests": 1,
+    "failed_tests": 9,
+    "success_rate": "10.0%",
+    "test_duration": "226.29s",
+    "timestamp": "2025-07-15T16:44:47.267625"
+  },
+  "test_results": [
+    {
+      "test_name": "Docker Environment",
+      "success": true,
+      "message": "Docker is running (version: 28.1.1)",
+      "details": null,
+      "timestamp": "2025-07-15T16:41:01.000194"
+    },
+    {
+      "test_name": "Sandbox Manager - Create",
+      "success": false,
+      "message": "Exception during sandbox creation",
+      "details": "404 Client Error for http+docker://localhost/v1.49/images/create?tag=latest&fromImage=local-suna-sandbox: Not Found (\"pull access denied for local-suna-sandbox, repository does not exist or may require 'docker login': denied: requested access to the resource is denied\")",
+      "timestamp": "2025-07-15T16:41:49.089823"
+    },
+    {
+      "test_name": "Sandbox Operations",
+      "success": false,
+      "message": "Exception during sandbox operations",
+      "details": "Sandbox for project test-project-1752568860 not found",
+      "timestamp": "2025-07-15T16:41:50.094505"
+    },
+    {
+      "test_name": "API Adapter - Get Workspace",
+      "success": false,
+      "message": "Cannot get workspace through API adapter",
+      "details": null,
+      "timestamp": "2025-07-15T16:41:51.096900"
+    },
+    {
+      "test_name": "Local Sandbox",
+      "success": false,
+      "message": "Exception during local sandbox test",
+      "details": "404 Client Error for http+docker://localhost/v1.49/images/create?tag=latest&fromImage=local-suna-sandbox: Not Found (\"pull access denied for local-suna-sandbox, repository does not exist or may require 'docker login': denied: requested access to the resource is denied\")",
+      "timestamp": "2025-07-15T16:42:37.434695"
+    },
+    {
+      "test_name": "Tool Base - Execute Tool",
+      "success": false,
+      "message": "Tool execution failed",
+      "details": {
+        "success": false,
+        "output": "",
+        "error": "404 Client Error for http+docker://localhost/v1.49/images/create?tag=latest&fromImage=local-suna-sandbox: Not Found (\"pull access denied for local-suna-sandbox, repository does not exist or may require 'docker login': denied: requested access to the resource is denied\")",
+        "tool": "ExampleLocalTool"
+      },
+      "timestamp": "2025-07-15T16:43:24.067274"
+    },
+    {
+      "test_name": "Tool Base - Write File",
+      "success": false,
+      "message": "File write failed",
+      "details": null,
+      "timestamp": "2025-07-15T16:44:45.260461"
+    },
+    {
+      "test_name": "Tool Base - Health Check",
+      "success": false,
+      "message": "Tool health check failed",
+      "details": {
+        "healthy": false,
+        "reason": "Sandbox not initialized",
+        "tool_class": "ExampleLocalTool",
+        "project_id": "test-project-1752568860"
+      },
+      "timestamp": "2025-07-15T16:44:45.260586"
+    },
+    {
+      "test_name": "Service URLs",
+      "success": false,
+      "message": "Exception during URL testing",
+      "details": "Sandbox for project test-project-1752568860 not found",
+      "timestamp": "2025-07-15T16:44:46.265430"
+    },
+    {
+      "test_name": "Cleanup",
+      "success": false,
+      "message": "Exception during cleanup",
+      "details": "Sandbox for project test-project-1752568860 not found",
+      "timestamp": "2025-07-15T16:44:47.267361"
+    }
+  ],
+  "recommendations": [
+    "Some tests failed. Please check the Docker environment and network connectivity."
+  ]
+}

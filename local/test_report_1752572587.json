@@ -1,0 +1,327 @@
+{
+  "summary": {
+    "total_tests": 22,
+    "passed_tests": 20,
+    "failed_tests": 2,
+    "success_rate": "90.9%",
+    "test_duration": "25.73s",
+    "timestamp": "2025-07-15T17:43:07.200916"
+  },
+  "test_results": [
+    {
+      "test_name": "Docker Environment",
+      "success": true,
+      "message": "Docker is running (version: 28.1.1)",
+      "details": null,
+      "timestamp": "2025-07-15T17:42:41.489433"
+    },
+    {
+      "test_name": "Sandbox Manager - Create",
+      "success": true,
+      "message": "Sandbox created successfully with container ID: dc85b40c701958258140d68d5b8a3378c5a07fdcf4bedfbd94e1da428a5685fe",
+      "details": {
+        "id": "dc85b40c701958258140d68d5b8a3378c5a07fdcf4bedfbd94e1da428a5685fe",
+        "name": "suna-sandbox-test-project-1752572561",
+        "status": "running",
+        "ports": {
+          "vnc": {
+            "internal": 5901,
+            "external": 15901
+          },
+          "novnc": {
+            "internal": 6080,
+            "external": 16080
+          },
+          "browser_api": {
+            "internal": 7788,
+            "external": 17788
+          },
+          "file_server": {
+            "internal": 8080,
+            "external": 18080
+          }
+        },
+        "created_at": "2025-07-15T17:42:52.384745",
+        "config": {
+          "project_id": "test-project-1752572561",
+          "vnc_password": "testpass123",
+          "resolution": "1280x720x24",
+          "cpu_limit": 2,
+          "memory_limit": "4g",
+          "disk_limit": "10g",
+          "auto_stop_hours": 24
+        },
+        "urls": {
+          "vnc": "vnc://localhost:15901",
+          "novnc": "http://localhost:16080",
+          "browser_api": "http://localhost:17788",
+          "file_server": "http://localhost:18080"
+        }
+      },
+      "timestamp": "2025-07-15T17:42:52.388907"
+    },
+    {
+      "test_name": "Sandbox Operations - Get",
+      "success": true,
+      "message": "Successfully retrieved sandbox info",
+      "details": {
+        "id": "dc85b40c701958258140d68d5b8a3378c5a07fdcf4bedfbd94e1da428a5685fe",
+        "name": "suna-sandbox-test-project-1752572561",
+        "status": "running",
+        "ports": {
+          "vnc": {
+            "internal": 5901,
+            "external": 15901
+          },
+          "novnc": {
+            "internal": 6080,
+            "external": 16080
+          },
+          "browser_api": {
+            "internal": 7788,
+            "external": 17788
+          },
+          "file_server": {
+            "internal": 8080,
+            "external": 18080
+          }
+        },
+        "created_at": "2025-07-15T17:42:52.384745",
+        "config": {
+          "project_id": "test-project-1752572561",
+          "vnc_password": "testpass123",
+          "resolution": "1280x720x24",
+          "cpu_limit": 2,
+          "memory_limit": "4g",
+          "disk_limit": "10g",
+          "auto_stop_hours": 24
+        },
+        "urls": {
+          "vnc": "vnc://localhost:15901",
+          "novnc": "http://localhost:16080",
+          "browser_api": "http://localhost:17788",
+          "file_server": "http://localhost:18080"
+        }
+      },
+      "timestamp": "2025-07-15T17:42:53.393787"
+    },
+    {
+      "test_name": "Sandbox Operations - List",
+      "success": true,
+      "message": "Found 1 sandboxes, test sandbox found",
+      "details": null,
+      "timestamp": "2025-07-15T17:42:53.404428"
+    },
+    {
+      "test_name": "API Adapter - Get Workspace",
+      "success": true,
+      "message": "Successfully got workspace (status: running)",
+      "details": {
+        "project_id": "test-project-1752572561",
+        "status": "running",
+        "urls": {
+          "vnc": "vnc://localhost:15901",
+          "novnc": "http://localhost:16080",
+          "browser_api": "http://localhost:17788",
+          "file_server": "http://localhost:18080"
+        }
+      },
+      "timestamp": "2025-07-15T17:42:54.409865"
+    },
+    {
+      "test_name": "API Adapter - Execute Command",
+      "success": true,
+      "message": "Command execution successful",
+      "details": {
+        "exit_code": 0,
+        "stdout": "Hello from API adapter!\n",
+        "stderr": "",
+        "success": true
+      },
+      "timestamp": "2025-07-15T17:42:54.459677"
+    },
+    {
+      "test_name": "Local Sandbox - Start",
+      "success": true,
+      "message": "Sandbox is running",
+      "details": {
+        "urls": {
+          "vnc": "vnc://localhost:15901",
+          "novnc": "http://localhost:16080",
+          "browser_api": "http://localhost:17788",
+          "file_server": "http://localhost:18080"
+        },
+        "workspace": "<local_api_adapter.LocalWorkspace object at 0x706188edb800>"
+      },
+      "timestamp": "2025-07-15T17:42:55.463705"
+    },
+    {
+      "test_name": "Local Sandbox - Supervisord",
+      "success": false,
+      "message": "Supervisord session failed",
+      "details": null,
+      "timestamp": "2025-07-15T17:42:57.512406"
+    },
+    {
+      "test_name": "Local Sandbox - Create Directory",
+      "success": true,
+      "message": "Directory creation successful",
+      "details": null,
+      "timestamp": "2025-07-15T17:42:57.562650"
+    },
+    {
+      "test_name": "Local Sandbox - Create File",
+      "success": true,
+      "message": "File creation successful",
+      "details": {
+        "exit_code": 0,
+        "stdout": "Hello from Local Sandbox test! > /workspace/test_file.txt\n",
+        "stderr": "",
+        "success": true
+      },
+      "timestamp": "2025-07-15T17:42:57.608487"
+    },
+    {
+      "test_name": "Local Sandbox - List Files",
+      "success": true,
+      "message": "Found 1 files/directories",
+      "details": [
+        {
+          "name": "test_dir",
+          "path": "/workspace/test_dir",
+          "size": "6",
+          "modified": "Jul 15 17:42",
+          "permissions": "drwxr-xr-x",
+          "type": "directory"
+        }
+      ],
+      "timestamp": "2025-07-15T17:42:57.691651"
+    },
+    {
+      "test_name": "Local Sandbox - Health Check",
+      "success": true,
+      "message": "Health check passed",
+      "details": {
+        "healthy": true,
+        "services": {
+          "vnc": true,
+          "novnc": true,
+          "file_server": true,
+          "browser_api": true
+        },
+        "workspace_status": "running",
+        "urls": {
+          "vnc": "vnc://localhost:15901",
+          "novnc": "http://localhost:16080",
+          "browser_api": "http://localhost:17788",
+          "file_server": "http://localhost:18080"
+        }
+      },
+      "timestamp": "2025-07-15T17:42:57.882970"
+    },
+    {
+      "test_name": "Tool Base - Execute Tool",
+      "success": true,
+      "message": "Tool execution successful",
+      "details": {
+        "success": true,
+        "output": "total 0\ndrwxr-xr-x 3 root root 30 Jul 15 17:42 .\ndrwxr-xr-x 1 root root 86 Jul 15 17:42 ..\ndrwxr-xr-x 2 root root  6 Jul 15 17:42 test_dir\n",
+        "error": "",
+        "tool": "ExampleLocalTool"
+      },
+      "timestamp": "2025-07-15T17:43:00.998712"
+    },
+    {
+      "test_name": "Tool Base - Write File",
+      "success": true,
+      "message": "File write successful",
+      "details": {
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "success": true
+      },
+      "timestamp": "2025-07-15T17:43:01.029893"
+    },
+    {
+      "test_name": "Tool Base - Read File",
+      "success": true,
+      "message": "File read successful",
+      "details": "Hello from Tool Base test!\n",
+      "timestamp": "2025-07-15T17:43:02.162115"
+    },
+    {
+      "test_name": "Tool Base - Health Check",
+      "success": true,
+      "message": "Tool health check passed",
+      "details": {
+        "healthy": true,
+        "reason": "Unknown",
+        "tool_class": "ExampleLocalTool",
+        "project_id": "test-project-1752572561",
+        "sandbox_info": {
+          "healthy": true,
+          "services": {
+            "vnc": true,
+            "novnc": true,
+            "file_server": true,
+            "browser_api": true
+          },
+          "workspace_status": "running",
+          "urls": {
+            "vnc": "vnc://localhost:15901",
+            "novnc": "http://localhost:16080",
+            "browser_api": "http://localhost:17788",
+            "file_server": "http://localhost:18080"
+          }
+        }
+      },
+      "timestamp": "2025-07-15T17:43:02.359609"
+    },
+    {
+      "test_name": "Service URL - vnc",
+      "success": true,
+      "message": "VNC protocol URL vnc://localhost:15901 (skipped HTTP test)",
+      "details": null,
+      "timestamp": "2025-07-15T17:43:03.364540"
+    },
+    {
+      "test_name": "Service URL - novnc",
+      "success": true,
+      "message": "URL http://localhost:16080 accessible (status: 200)",
+      "details": null,
+      "timestamp": "2025-07-15T17:43:03.378205"
+    },
+    {
+      "test_name": "Service URL - browser_api",
+      "success": true,
+      "message": "URL http://localhost:17788 accessible (status: 200)",
+      "details": null,
+      "timestamp": "2025-07-15T17:43:03.381816"
+    },
+    {
+      "test_name": "Service URL - file_server",
+      "success": true,
+      "message": "URL http://localhost:18080 accessible (status: 200)",
+      "details": null,
+      "timestamp": "2025-07-15T17:43:03.392935"
+    },
+    {
+      "test_name": "Service URLs - Overall",
+      "success": true,
+      "message": "4/4 services accessible",
+      "details": null,
+      "timestamp": "2025-07-15T17:43:03.393755"
+    },
+    {
+      "test_name": "Cleanup",
+      "success": null,
+      "message": "Test sandbox deletion failed",
+      "details": null,
+      "timestamp": "2025-07-15T17:43:07.200818"
+    }
+  ],
+  "recommendations": [
+    "Some tests failed. Please check the Docker environment and network connectivity."
+  ]
+}

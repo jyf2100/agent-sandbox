@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "total_tests": 5,
+    "passed_tests": 5,
+    "failed_tests": 0,
+    "success_rate": "100.0%",
+    "test_duration": "0.52s",
+    "timestamp": "2025-07-15T16:48:35.796391"
+  },
+  "test_results": [
+    {
+      "test_name": "API适配器导入",
+      "success": true,
+      "message": "成功导入LocalApiAdapter类",
+      "details": null,
+      "timestamp": "2025-07-15T16:48:35.288301"
+    },
+    {
+      "test_name": "获取API适配器实例",
+      "success": true,
+      "message": "成功获取API适配器实例: LocalApiAdapter",
+      "details": null,
+      "timestamp": "2025-07-15T16:48:35.388812"
+    },
+    {
+      "test_name": "模块结构检查",
+      "success": true,
+      "message": "所有关键模块都存在: local_api_adapter, local_sandbox, local_sandbox_manager, local_tool_base",
+      "details": null,
+      "timestamp": "2025-07-15T16:48:35.490940"
+    },
+    {
+      "test_name": "文件结构检查",
+      "success": true,
+      "message": "所有必需文件都存在 (8/8)",
+      "details": null,
+      "timestamp": "2025-07-15T16:48:35.591688"
+    },
+    {
+      "test_name": "列出工作空间",
+      "success": true,
+      "message": "成功调用list_workspaces，返回0个工作空间",
+      "details": [],
+      "timestamp": "2025-07-15T16:48:35.695896"
+    }
+  ],
+  "recommendations": [
+    "所有基础测试通过！本地化沙箱的基础结构正常。",
+    "下一步可以构建Docker镜像并运行完整测试。"
+  ]
+}
